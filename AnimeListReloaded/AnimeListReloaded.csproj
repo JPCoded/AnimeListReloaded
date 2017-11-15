@@ -70,12 +70,18 @@
     <Compile Include="AnimeObjects\AniAiring.cs" />
     <Compile Include="AnimeObjects\Anime.cs" />
     <Compile Include="AnimeObjects\AniRating.cs" />
+    <Compile Include="AnimeObjects\GetAnime.cs" />
+    <Compile Include="AnimeObjects\MyAnime.cs" />
+    <Compile Include="AnimeObjects\UpdateAnime.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="GetDocumentNodes.cs" />
     <Compile Include="Interfaces\IAnime.cs" />
+    <Compile Include="Interfaces\IGetAnime.cs" />
+    <Compile Include="Interfaces\IMyAnime.cs" />
+    <Compile Include="Interfaces\IUpdateAnime.cs" />
     <Compile Include="JsonLoader .cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
