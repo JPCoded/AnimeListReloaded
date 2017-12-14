@@ -10,7 +10,6 @@
         <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="23" Margin="79,11,0,0" TextWrapping="Wrap" Text="CWarlord87" VerticalAlignment="Top" Width="155"/>
         <Label x:Name="lblUsername" Content="Username:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="64"/>
         <Button x:Name="btnLoad" Content="Load" HorizontalAlignment="Left" Margin="239,11,0,0" VerticalAlignment="Top" Width="75" Click="BtnLoad_Click"/>
-        <ProgressBar x:Name="pbUrl" HorizontalAlignment="Left" Height="10" Margin="319,21,0,0" VerticalAlignment="Top" Width="175"/>
 
     </Grid>
 </Window>
