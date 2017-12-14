@@ -20,9 +20,9 @@ namespace AnimeListReloaded
         private void BtnLoad_Click(object sender, RoutedEventArgs e)
         {
             var animeElements = GetElements($"http://myanimelist.net/malappinfo.php?u={txtUsername.Text}&status=all&type=anime");
-          
+            var genreList = new List<string>();
             var genreDic = new Dictionary<string, int>();
-            foreach (var t in animeElements.Select(anime => anime.Element("my_tags")?.Value).Select(genres => genres.Split(',')).SelectMany(temp => temp))
+            foreach (var t in from g in animeElements let genres = g.Element("my_tags")?.Value let status = g.Element("my_status")?.Value let temp = genres.Split(',') where status == "Completed" || status == "2" from t in temp select t)
             {
                 if (genreDic.ContainsKey(t.Trim()))
                 {
@@ -30,7 +30,7 @@ namespace AnimeListReloaded
                 }
                 else
                 {
-                    genreDic.Add(t.Trim(),1);
+                    genreDic.Add(t.Trim(), 1);
                 }
             }
           
